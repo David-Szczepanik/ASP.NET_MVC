@@ -9,7 +9,6 @@ namespace ASP.NETSchool.Controllers {
         public StudentsController(StudentService studentService) {
             this.service = studentService;
         }
-
         public async Task<IActionResult> IndexAsync() {
             var allStudents = await service.GetAllAsync();
             return View(allStudents);
